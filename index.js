@@ -18,6 +18,8 @@ function processFirstItem(stringList, callback) {
   return callback(stringList[0])
 }
 
+// console.log(processFirstItem(["foo", "bar"], (str) => str + str ))
+
 // ⭐️ Example Challenge END ⭐️
 
 
@@ -26,12 +28,20 @@ function processFirstItem(stringList, callback) {
 /* Task 1: `counterMaker`
  * Study the code for counter1 and counter2. Answer the questions below.
  * 
- * 1. What is the difference between counter1 and counter2?
+ * 1. What is the difference between counter1 and counter2? 
+ * 
+ * In counter1 count is in the function counterMaker, which means you wouldn't be able to access it later.
+ * In counter2 count is a global variable, and can be accessed anywhere.
  * 
  * 2. Which of the two uses a closure? How can you tell?
  * 
- * 3. In what scenario would the counter1 code be preferable? In what scenario would counter2 be better? 
+ * counter2 is the simplest form of a closure because the function has access to the outside scope (global) and can access the variable count to return it.
+ * counter 2 is also closure because it is a nested function. counter returns the count variable which is not a local variable, so it out reaches to its parent function to access it.
  *
+ *  3. In what scenario would the counter1 code be preferable? In what scenario would counter2 be better? 
+ *
+ * You would use counter1 if you wanted to keep the variable private within its self. 
+ * You would use counter2 if you need in accessable to multiple functions.
 */
 
 // counter1 code
@@ -56,11 +66,22 @@ function counter2() {
 
 Write a function called `inning` that generates a random number of points that a team scored in an inning. This should be a whole number between 0 and 2. */
 
-function inning(/*Code Here*/){
-
-    /*Code Here*/
+function inning() {
+  let score = Math.floor(3 * Math.random());
+  return score;
 
 }
+
+// console.log(inning());
+// console.log(inning());
+// console.log(inning());
+// console.log(inning());
+// console.log(inning());
+// console.log(inning());
+// console.log(inning());
+// console.log(inning());
+// console.log(inning());
+
 
 /* Task 3: finalScore()
 
