@@ -41,7 +41,9 @@ Find the file `index.js` and complete the tasks.
 
 Edit the `ReadMe` file with your answers.
 
-1. In your own words, define closure (1-2 sentences).
+1. In your own words, define closure (1-2 sentences). 
+Closure is the combination of a function bundled together with access to its surrounding state or lexical environment. Closure basically provides access to an outer function's scope from an inner function and also access to var, etc on a global scope.
+
 2. Study the following code, then answer the questions below.
 
 ```js
@@ -63,8 +65,11 @@ dansRoll();
 ```
 
 a. Where is closure used in this code? How can you tell?
+Closure is used in the function personalDice. there is a return function nested inside it.
 b. Compare and contrast calling `dansRoll` the first and second time. What is always the same? What could change?
-c. What is the lexical scope of `newRoll`? 
+"Dan" will always be the same. The roll of the dice will could change.
+c. What is the lexical scope of `newRoll`?
+The lexical scope of newRoll is return function() as well as what is enclosed in personalDice.
 
 ### Task 3 - Stretch Goals
 
